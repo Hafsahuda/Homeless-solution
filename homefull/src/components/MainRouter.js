@@ -18,17 +18,25 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import classNames from 'classnames';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-const styles = theme => ({
-    root: {
-        width: '100%',
-    },
+
+
+const drawerWidth = 240;
+const styles = theme => createMuiTheme({
     grow: {
         flexGrow: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
     },
     title: {
         display: 'none',
@@ -87,36 +95,88 @@ const styles = theme => ({
             display: 'none',
         },
     },
+    root: {
+        display: 'flex',
+    },
+    appBar: {
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        backgroundColor: 'rgb(50, 50, 50)',
+    },
+    appBarShift: {
+        width: `calc(100% - ${drawerWidth}px)`,
+        marginLeft: drawerWidth,
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    },
+    menuButton: {
+        marginLeft: 12,
+        marginRight: 20,
+    },
+    hide: {
+        display: 'none',
+    },
+    drawer: {
+        width: drawerWidth,
+        flexShrink: 0,
+    },
+    drawerPaper: {
+        backgroundColor: 'rgb(50, 50, 50)',
+        width: drawerWidth,
+    },
+    drawerHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '0 8px',
+        ...theme.mixins.toolbar,
+        justifyContent: 'flex-end',
+    },
+    content: {
+        flexGrow: 1,
+        padding: theme.spacing.unit * 30,
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        marginLeft: -drawerWidth,
+    },
+    contentShift: {
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginLeft: 0,
+    },
+    white: {
+        color: 'white',
+    },
 });
 
 class MainRouter extends React.Component {
     state = {
+        open: false,
         anchorEl: null,
         mobileMoreAnchorEl: null,
     };
 
-    handleProfileMenuOpen = event => {
-        this.setState({ anchorEl: event.currentTarget });
+    handleDrawerOpen = () => {
+        this.setState({ open: true });
     };
 
-    handleMenuClose = () => {
-        this.setState({ anchorEl: null });
-        this.handleMobileMenuClose();
-    };
-
-    handleMobileMenuOpen = event => {
-        this.setState({ mobileMoreAnchorEl: event.currentTarget });
-    };
-
-    handleMobileMenuClose = () => {
-        this.setState({ mobileMoreAnchorEl: null });
+    handleDrawerClose = () => {
+        this.setState({ open: false });
     };
 
     render() {
-        const { anchorEl, mobileMoreAnchorEl } = this.state;
-        const { classes } = this.props;
+        const { classes, theme } = this.props;
+        const { open, anchorEl, mobileMoreAnchorEl } = this.state;
         const isMenuOpen = Boolean(anchorEl);
         const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+        document.body.style = 'background: black;';
 
         const renderMenu = (
             <Menu
@@ -141,7 +201,7 @@ class MainRouter extends React.Component {
             >
                 <MenuItem onClick={this.handleMobileMenuClose}>
                     <IconButton color="inherit">
-                        <Badge badgeContent={4} color="secondary">
+                        <Badge badgeContent={0} color="secondary">
                             <MailIcon />
                         </Badge>
                     </IconButton>
@@ -149,7 +209,7 @@ class MainRouter extends React.Component {
                 </MenuItem>
                 <MenuItem onClick={this.handleMobileMenuClose}>
                     <IconButton color="inherit">
-                        <Badge badgeContent={11} color="secondary">
+                        <Badge badgeContent={0} color="secondary">
                             <NotificationsIcon />
                         </Badge>
                     </IconButton>
@@ -166,14 +226,25 @@ class MainRouter extends React.Component {
 
         return (
             <div className={classes.root}>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+                <CssBaseline />
+                <AppBar
+                    position="fixed"
+                    className={classNames(classes.appBar, {
+                        [classes.appBarShift]: open,
+                    })}
+                >
+                    <Toolbar disableGutters={!open}>
+                        <IconButton
+                            color="inherit"
+                            aria-label="Open drawer"
+                            onClick={this.handleDrawerOpen}
+                            className={classNames(classes.menuButton, open && classes.hide)}
+                        >
                             <MenuIcon />
                         </IconButton>
-                        <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                            Material-UI
-              </Typography>
+                        <Typography variant="h4" color="inherit" noWrap>
+                            Homeful
+                        </Typography>
                         <div className={classes.search}>
                             <div className={classes.searchIcon}>
                                 <SearchIcon />
@@ -189,12 +260,12 @@ class MainRouter extends React.Component {
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop}>
                             <IconButton color="inherit">
-                                <Badge badgeContent={4} color="secondary">
+                                <Badge badgeContent={0} color="secondary">
                                     <MailIcon />
                                 </Badge>
                             </IconButton>
                             <IconButton color="inherit">
-                                <Badge badgeContent={17} color="secondary">
+                                <Badge badgeContent={0} color="secondary">
                                     <NotificationsIcon />
                                 </Badge>
                             </IconButton>
@@ -216,10 +287,60 @@ class MainRouter extends React.Component {
                 </AppBar>
                 {renderMenu}
                 {renderMobileMenu}
+                <Drawer
+                    className={classes.drawer}
+                    variant="persistent"
+                    anchor="left"
+                    open={open}
+                    classes={{
+                        paper: classes.drawerPaper,
+                    }}
+                >
+                    <div className={classes.drawerHeader}>
+                        <IconButton onClick={this.handleDrawerClose}>
+                            <ChevronLeftIcon />
+                        </IconButton>
+                    </div>
+                    <Divider />
+                    <List >
+                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                            <ListItem style={{color: 'white'}} button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        ))}
+                    </List>
+                    <Divider />
+                    <List>
+                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                                <ListItemText disableTypography primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>MyTitle</Typography>} />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Drawer>
+                <main
+                    className={classNames(classes.content, {
+                        [classes.contentShift]: open,
+                    })}
+                >
+                    <div className={classes.drawerHeader} />
+                    <Typography variant="h1" style={{ color: 'white' }} paragraph>
+                        Welcome to Homeful
+                    </Typography>
+                </main>
             </div>
         );
     }
 }
+
+MainRouter.propTypes = {
+    classes: PropTypes.object.isRequired,
+    theme: PropTypes.object.isRequired,
+};
+
+
 
 MainRouter.propTypes = {
     classes: PropTypes.object.isRequired,
