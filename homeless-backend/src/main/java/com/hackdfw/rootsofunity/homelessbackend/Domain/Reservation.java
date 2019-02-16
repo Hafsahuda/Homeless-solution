@@ -1,11 +1,9 @@
 package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class Reservation {
 
     @Id
