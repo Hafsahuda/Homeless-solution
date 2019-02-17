@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hackdfw.rootsofunity.homelessbackend.Domain.RoomAvailability;
@@ -21,7 +22,7 @@ public class AvailabilitySearchController {
     RoomAvailabilitySearchService roomAvailabilitySearchService;
 
     @RequestMapping(value = "")
-    public Set<RoomAvailability> getAvailableRooms(@RequestParam @DateTimeFormat(pattern="dd-MM-yyyy")Date fromDate, @RequestParam @DateTimeFormat(pattern="dd-MM-yyyy") Date toDate, @RequestParam String zipcode){
+    public @ResponseBody Set<RoomAvailability> getAvailableRooms(@RequestParam @DateTimeFormat(pattern="dd-MM-yyyy")Date fromDate, @RequestParam @DateTimeFormat(pattern="dd-MM-yyyy") Date toDate, @RequestParam String zipcode){
         return roomAvailabilitySearchService.search(fromDate, toDate, zipcode);
     }
 
