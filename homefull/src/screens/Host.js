@@ -8,8 +8,68 @@ import TextField from '@material-ui/core/TextField';
 import classNames from 'classnames';
 
 class Host extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            ownerId: 0,
+            address: '',
+            city: '',
+            state: '',
+            zipcode: '',
+            startDate: '',
+            endDate: '',
+        }
+    }
+
     render() {
         const { classes, theme } = this.props;
+
+        const handleSubmit = () => {
+            url = 'http://localhost:8080/addRoom';
+            data = {
+                ownerId: this.state.ownerId,
+                address: this.state.address,
+                city: this.state.city,
+                state: this.state.state,
+                zipcode: this.state.zipcode,
+                availableFrom: this.state.startDate,
+                availableTo: this.state.endDate,
+            };
+            fetch(url, {
+                method: 'post',
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-type": "application/json"
+                }})
+            .then(res => res.json())
+            .then(posts => console.log(posts));
+        }
+
+        const updateAddress = event => {
+            this.setState({address: event.target.value});
+        }
+
+        const updateCity = event => {
+            this.setState({city: event.target.value});
+        }
+
+        const updateState = event => {
+            this.setState({state: event.target.value});
+        }
+
+        const updateZipcode = event => {
+            this.setState({zipcode: event.target.value});
+        }
+
+        const updateStartDate = event => {
+            this.setState({startDate: event.target.value});
+        }
+
+        const updateEndDate = event => {
+            this.setState({endDate: event.target.value});
+        }
+
         return (
             <div style={{textAlign:'center'}}>
                 <h1 style={{color:'white'}}>
@@ -19,6 +79,8 @@ class Host extends Component {
                 Please enter the following information:
                 <div style={{display: 'block', padding: '10px'}}>
                     <TextField
+                    value={this.state.address}
+                    onChange={event => updateAddress(event)}
                     id="outlined-dense"
                     label="Street Address"
                     className={classNames(classes.textField, classes.dense)}
@@ -26,6 +88,8 @@ class Host extends Component {
                     variant="outlined"
                     />
                     <TextField
+                    value={this.state.city}
+                    onChange={event => updateCity(event)}
                     id="outlined-dense"
                     label="City"
                     className={classNames(classes.textField, classes.dense)}
@@ -33,6 +97,8 @@ class Host extends Component {
                     variant="outlined"
                     />
                     <TextField
+                    value={this.state.state}
+                    onChange={event => updateState(event)}
                     id="outlined-dense"
                     label="State"
                     className={classNames(classes.textField, classes.dense)}
@@ -40,6 +106,8 @@ class Host extends Component {
                     variant="outlined"
                     />
                     <TextField
+                    value={this.state.zipcode}
+                    onChange={event => updateZipcode(event)}
                     id="outlined-dense"
                     label="Zipcode"
                     className={classNames(classes.textField, classes.dense)}
@@ -47,6 +115,8 @@ class Host extends Component {
                     variant="outlined"
                     />
                     <TextField
+                    value={this.state.startDate}
+                    onChange={event => updateStartDate(event)}
                     id="outlined-dense"
                     label="Start Date"
                     className={classNames(classes.textField, classes.dense)}
@@ -54,6 +124,8 @@ class Host extends Component {
                     variant="outlined"
                     />
                     <TextField
+                    value={this.state.endDate}
+                    onChange={event => updateEndDate(event)}
                     id="outlined-dense"
                     label="End Date"
                     className={classNames(classes.textField, classes.dense)}
@@ -61,7 +133,7 @@ class Host extends Component {
                     variant="outlined"
                     />
                 </div>
-                <Button variant="contained" color="primary" className={classes.button}>
+                <Button variant="contained" onClick={handleSubmit} color="primary" className={classes.button}>
                     submit
                 </Button>
             </div>
