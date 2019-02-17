@@ -9,6 +9,6 @@ import com.hackdfw.rootsofunity.homelessbackend.Domain.Availability;
 
 public interface RoomAvailabilityRepository extends JpaRepository<Availability, Long> {
 
-    Set<Availability> getAvailabilitiesByRoom_ZipcodeIsAndAvailableFromIsBeforeAndAvailableToAfter(int zipcode,Date fromDate, Date toDate);
+    Set<Availability> getAvailabilitiesByRoom_ZipcodeIsAndAvailableFromIsBeforeAndAvailableToAfter(String zipcode,Date fromDate, Date toDate);
 
 }

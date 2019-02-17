@@ -20,5 +20,5 @@ public class Room {
 
     private String state;
 
-    private int zipcode;
+    private String zipcode;
 }
