@@ -3,6 +3,7 @@ package com.hackdfw.rootsofunity.homelessbackend.Controller;
 import com.hackdfw.rootsofunity.homelessbackend.Domain.RoomAvailability;
 import com.hackdfw.rootsofunity.homelessbackend.Service.RoomAvailabilitySearchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -17,7 +18,7 @@ public class AvailabilitySearchController {
     RoomAvailabilitySearchService roomAvailabilitySearchService;
 
     @RequestMapping(value = "")
-    public Set<RoomAvailability> getAvailableRooms(@RequestParam Date fromDate,@RequestParam Date toDate,@RequestParam long zipcode){
+    public Set<RoomAvailability> getAvailableRooms(@RequestParam @DateTimeFormat(pattern="yyyy-MM-dd")Date fromDate, @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date toDate, @RequestParam int zipcode){
         return roomAvailabilitySearchService.search(fromDate, toDate, zipcode);
     }
 
