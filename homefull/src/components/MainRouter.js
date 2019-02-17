@@ -313,18 +313,22 @@ class MainRouter extends React.Component {
                         </div>
                         <Divider />
                         <List>
-                            <ListItem >
-                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Book Room</Typography>} />
+                            <ListItem>
+                                <ListItemText primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Book Room</Typography>} />
                             </ListItem>
+                            <Divider />
                             <ListItem >
-                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Host</Typography>} />
+                                <ListItemText primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Host</Typography>} />
                             </ListItem>
+                            <Divider />
                             <ListItem >
-                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Find a Charity</Typography>} />
+                                <ListItemText primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Find a Charity</Typography>} />
                             </ListItem>
+                            <Divider />
                             <ListItem >
-                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Donate</Typography>} />
+                                <ListItemText primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Donate</Typography>} />
                             </ListItem>
+                            <Divider />
                         </List>
                     </Drawer>
                     <main
@@ -338,7 +342,7 @@ class MainRouter extends React.Component {
                         <Route exact path="/host" component={Host}></Route>
                         <Route exact path="/find-charity" component={FindCharity}></Route>
                         <Route exact path="/pay" component={Pay}></Route>
-                        <Route exact path="/paid" component={Paid}></Route>
+                        <Route exact path="/congratulations" component={Paid}></Route>
                         <Route exact path="/donate" component={Donate}></Route>
                         <Route exact path="/test" component={Test}></Route>
                     </main>
