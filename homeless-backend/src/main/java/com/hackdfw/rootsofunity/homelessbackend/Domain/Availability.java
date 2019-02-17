@@ -23,7 +23,7 @@ public class Availability {
 
     private Date availableTo;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "roomId")
     private Room room;
 

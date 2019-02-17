@@ -26,9 +26,15 @@ public class AddRoomController {
 	@PostMapping("/addRoom")
 	public ResponseEntity postController(@RequestBody AddRoomReq roomReq) {
 
-		Availability availabilty = roomReq.toAvailability();
-		availabilityRepo.save(availabilty);
-		
+		Room room = roomReq.toRoom();
+		room = roomRepo.save(room);
+
+
+		Availability availability = roomReq.toAvailability();
+		availability.setRoom(room);
+
+		availabilityRepo.save(availability);
+
 		return ResponseEntity.ok(HttpStatus.OK);
 	}
 
