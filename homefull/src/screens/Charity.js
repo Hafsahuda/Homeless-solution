@@ -95,8 +95,8 @@ class Charity extends Component {
         console.log(this)
         return (
 
-            <div style={{ color: 'white' }}>
-                <h1 >
+            <div style={{ color: 'white', textAlign:'center' }}>
+                <h1 style={{marginTop: '20px'}} >
                     Search Rooms
                 </h1>
 
