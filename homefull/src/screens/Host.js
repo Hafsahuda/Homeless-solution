@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-export class Home extends Component {
+export class Host extends Component {
     constructor(props) {
         super(props);
     }
@@ -22,15 +22,9 @@ export class Home extends Component {
         return (
             <div>
                 <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }} paragraph>
-                    Welcome to Homeful
+                    Hey Host
                 </Typography>
                 <div style={{ textAlign: 'center' }}>
-                    <Button component={Link} to="/charity" size="large" variant="outlined" color="secondary" className={classes.button}>
-                        Charity
-                    </Button>
-                    <Button component={Link} to="/host" size="large" variant="outlined" color="secondary" className={classes.button}>
-                        Host
-                    </Button>
                 </div>
             </div>
         );
@@ -44,9 +38,9 @@ const styles = theme => ({
     },
 });
 
-Home.propTypes = {
+Host.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(Host);

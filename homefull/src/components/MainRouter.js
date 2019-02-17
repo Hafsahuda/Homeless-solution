@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../screens/Home';
+import Charity from '../screens/Charity';
+import Host from '../screens/Host';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -125,7 +127,7 @@ const styles = theme => createMuiTheme({
         flexShrink: 0,
     },
     drawerPaper: {
-        backgroundColor: 'rgb(50, 50, 50)',
+        backgroundColor: 'rgb(80, 80, 80)',
         width: drawerWidth,
     },
     drawerHeader: {
@@ -153,6 +155,9 @@ const styles = theme => createMuiTheme({
     },
     white: {
         color: 'white',
+    },
+    button: {
+        margin: theme.spacing.unit,
     },
 });
 
@@ -225,6 +230,7 @@ class MainRouter extends React.Component {
         );
 
         return (
+            <Router>
             <div className={classes.root}>
                 <CssBaseline />
                 <AppBar
@@ -242,7 +248,7 @@ class MainRouter extends React.Component {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography variant="h4" color="inherit" noWrap>
+                        <Typography component={Link} to="/" variant="h4" color="inherit" noWrap>
                             Homeful
                         </Typography>
                         <div className={classes.search}>
@@ -302,15 +308,6 @@ class MainRouter extends React.Component {
                         </IconButton>
                     </div>
                     <Divider />
-                    <List >
-                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                            <ListItem style={{color: 'white'}} button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        ))}
-                    </List>
-                    <Divider />
                     <List>
                         {['All mail', 'Trash', 'Spam'].map((text, index) => (
                             <ListItem button key={text}>
@@ -326,11 +323,13 @@ class MainRouter extends React.Component {
                     })}
                 >
                     <div className={classes.drawerHeader} />
-                    <Typography variant="h1" style={{ color: 'white' }} paragraph>
-                        Welcome to Homeful
-                    </Typography>
+                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/charity" component={Charity}></Route>
+                    <Route exact path="/host" component={Host}></Route>
                 </main>
+
             </div>
+            </Router>
         );
     }
 }
@@ -340,10 +339,5 @@ MainRouter.propTypes = {
     theme: PropTypes.object.isRequired,
 };
 
-
-
-MainRouter.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(MainRouter);
