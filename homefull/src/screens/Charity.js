@@ -10,54 +10,52 @@ import Grid from '@material-ui/core/Grid';
 class Charity extends Component {
 
 
-
     constructor(props) {
         super(props);
         this.state = {
-            jsn: {
-                title: 'houselist',
-                roomList: ['address1', 'address2', 'address3']
-            }
+            jsn:[]
         };
     }
 
+
+
+
     componentDidMount() {
 
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+       // let jsn = [];
+        fetch('http://ec2-3-82-226-163.compute-1.amazonaws.com:8080/room/search?fromDate=17-02-2019&toDate=18-02-2019&zipcode=75252',
+            {
+                crossDomain: true
+            })
             .then(response => response.json())
             .then((data) =>
                 this.setState({
-                    jsn: {
-                        title: 'houselist',
-                        roomList: ['address1', 'address2', 'address3']
-                    }
-                }))
-            .then(console.log('swathy ==== ' + this.state.jsn))
-            .catch(error => this.setState({ error, isLoading: false }));
+                    jsn: data
+                }));
     }
 
-
     render() {
-        const { classes, theme } = this.props;
-        //console.log(this)
+        //const { classes, theme } = this.props;
+        console.log(this)
         return (
 
             <div>
                 <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }} paragraph>
-                    Available Homes
+                   {this.state.jsn.map((obj)=>(
+			     <Grid >
+                     {obj.availability.map((avaObj)=>{
+                          var fd = avaObj.availableFrom;
+                            return <HouseCard startDate={fd} endDate={avaObj.availableTo}
+                                address={obj.room.address}
+                                city={obj.room.city} state={obj.room.state} zipcode={obj.room.zip}
+                                roomId={obj.room.roomId} />
+                                })}
+                        </Grid>
+                   ))}
                 </Typography>
-                <div style={{ padding: 20 }}>
-                    <Grid container spacing={40}>
-                        {this.state.jsn.roomList.map((address, index) => (
-
-                            <HouseCard startDate='Feb 16' endDate='Feb 17' address={address}
-                                city='Dallas' state='TX' zipcode='77005' roomId={index} />
+                
 
 
-                        ))}
-
-                    </Grid>
-                </div>
 
             </div >
         )
