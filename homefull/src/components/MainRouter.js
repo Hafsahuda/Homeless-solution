@@ -4,6 +4,7 @@ import Home from '../screens/Home';
 import Charity from '../screens/Charity';
 import Host from '../screens/Host';
 import FindCharity from '../screens/FindCharity';
+import Pay from '../screens/Pay';
 import Test from '../screens/testing';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -249,7 +250,7 @@ class MainRouter extends React.Component {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <Typography component={Link} to="/" variant="h4" color="inherit" noWrap>
+                            <Typography component={Link} to="/" style={{textDecoration: 'none'}} variant="h4" color="inherit" noWrap>
                                 Homeful
                         </Typography>
                             <div className={classes.search}>
@@ -328,6 +329,7 @@ class MainRouter extends React.Component {
                         <Route exact path="/charity" component={Charity}></Route>
                         <Route exact path="/host" component={Host}></Route>
                         <Route exact path="/find-charity" component={FindCharity}></Route>
+                        <Route exact path="/pay" component={Pay}></Route>
                         <Route exact path="/test" component={Test}></Route>
                     </main>
                 </div>

@@ -26,8 +26,8 @@ class Host extends Component {
         const { classes, theme } = this.props;
 
         const handleSubmit = () => {
-            url = 'http://localhost:8080/addRoom';
-            data = {
+            const url = 'http://localhost:8080/addRoom';
+            const data = {
                 ownerId: this.state.ownerId,
                 address: this.state.address,
                 city: this.state.city,

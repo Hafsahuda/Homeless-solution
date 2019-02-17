@@ -43,17 +43,26 @@ const styles = theme => ({
     },
 });
 
+
+
 class HouseCard extends React.Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
     }
 
+
+
+    handleClick() {
+        //e.preventDefault();
+        alert(this.props.roomId);
+    }
 
     render() {
         const { classes } = this.props;
 
         return (
-            <Card className={classes.card}>
+            <Card className={classes.card} onClick={this.handleClick}>
                 <CardHeader
                     //   avatar={
                     //     <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -66,7 +75,7 @@ class HouseCard extends React.Component {
                         </IconButton>
                     }
                     title={this.props.address + ', ' + this.props.city + ' ' + this.props.state + ' ' + this.props.zipcode}
-                    // subheader="Posted on September 14, 2016"
+                // subheader="Posted on September 14, 2016"
                 />
                 <CardMedia
                     className={classes.media}
@@ -76,7 +85,7 @@ class HouseCard extends React.Component {
                 <CardContent>
                     <Typography component="p">
                         {this.props.startDate} - {this.props.endDate}
-          </Typography>
+                    </Typography>
                 </CardContent>
                 <CardActions className={classes.actions}>
                     <IconButton aria-label="Add to favorites">
