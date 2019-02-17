@@ -2,6 +2,9 @@ package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
 import javax.persistence.*;
 
+import lombok.Data;
+
+@Data
 @Entity
 public class Room {
 

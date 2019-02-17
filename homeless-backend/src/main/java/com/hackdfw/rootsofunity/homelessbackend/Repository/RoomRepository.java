@@ -1,9 +1,10 @@
+
 package com.hackdfw.rootsofunity.homelessbackend.Repository;
 
-import com.hackdfw.rootsofunity.homelessbackend.Domain.Charity;
+import com.hackdfw.rootsofunity.homelessbackend.Domain.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CharityRepository extends JpaRepository<Charity, Long> {
+public interface RoomRepository  extends JpaRepository<Room, Long> {
 
     
 }
