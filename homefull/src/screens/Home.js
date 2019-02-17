@@ -16,13 +16,16 @@ class Home extends Component {
                 </Typography>
                 <div style={{ textAlign: 'center' }}>
                     <Button component={Link} to="/charity" size="large" variant="outlined" color="secondary" className={classes.button}>
-                        Charity
+                        Book Room
                     </Button>
                     <Button component={Link} to="/host" size="large" variant="outlined" color="secondary" className={classes.button}>
                         Host
                     </Button>
                     <Button component={Link} to="/find-charity" size="large" variant="outlined" color="secondary" className={classes.button}>
                         Find a Charity
+                    </Button>
+                    <Button component={Link} to="/donate" size="large" variant="outlined" color="secondary" className={classes.button}>
+                        Donate
                     </Button>
                 </div>
             </div>

@@ -6,136 +6,77 @@ import Button from '@material-ui/core/Button';
 import { withStyles, withTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import classNames from 'classnames';
+// import Loadable from 'react-loading-overlay'
 
-class Host extends Component {
+class Donate extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            ownerId: 0,
-            address: '',
-            city: '',
-            state: '',
-            zipcode: '',
-            startDate: '',
-            endDate: '',
+            loading: false,
         }
     }
 
     render() {
         const { classes, theme } = this.props;
 
-        const handleSubmit = () => {
-            const url = 'http://ec2-3-82-226-163.compute-1.amazonaws.com:8080/';
-            const data = {
-                ownerId: this.state.ownerId,
-                address: this.state.address,
-                city: this.state.city,
-                state: this.state.state,
-                zipcode: this.state.zipcode,
-                availableFrom: this.state.startDate,
-                availableTo: this.state.endDate,
-            };
-            fetch(url, {
-                mode: 'no-cors',
-                method: 'post',
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-type": "application/json"
-                }})
-            .then(res => res.json())
-            .then(posts => console.log(posts));
-        }
-
-        const updateAddress = event => {
-            this.setState({address: event.target.value});
-        }
-
-        const updateCity = event => {
-            this.setState({city: event.target.value});
-        }
-
-        const updateTheState = event => {
-            this.setState({state: event.target.value});
-        }
-
-        const updateZipcode = event => {
-            this.setState({zipcode: event.target.value});
-        }
-
-        const updateStartDate = event => {
-            this.setState({startDate: event.target.value});
-        }
-
-        const updateEndDate = event => {
-            this.setState({endDate: event.target.value});
-        }
+        // const handleSubmit = () => {
+            
+        // }
 
         return (
             <div style={{textAlign:'center'}}>
                 <h1 style={{color:'white'}}>
-                    Thank you for agreeing to host!
+                    Donate to help the homeless find shelter!
                 </h1>
             <div style={formStyle}>
                 Please enter the following information:
                 <div style={{display: 'block', padding: '10px'}}>
                     <TextField
-                    value={this.state.address}
-                    onChange={event => updateAddress(event)}
                     id="outlined-dense"
-                    label="Street Address"
+                    label="Credit Card Number"
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
                     variant="outlined"
                     />
                     <TextField
-                    value={this.state.city}
-                    onChange={event => updateCity(event)}
                     id="outlined-dense"
-                    label="City"
+                    label="CVC"
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
                     variant="outlined"
                     />
                     <TextField
-                    value={this.state.state}
-                    onChange={event => updateTheState(event)}
                     id="outlined-dense"
-                    label="State"
+                    label="First Name"
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
                     variant="outlined"
                     />
                     <TextField
-                    value={this.state.zipcode}
-                    onChange={event => updateZipcode(event)}
                     id="outlined-dense"
-                    label="Zipcode"
+                    label="Last Name"
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
                     variant="outlined"
                     />
                     <TextField
-                    value={this.state.startDate}
-                    onChange={event => updateStartDate(event)}
                     id="outlined-dense"
-                    label="Start Date"
+                    label="Month of Expiry"
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
                     variant="outlined"
                     />
                     <TextField
-                    value={this.state.endDate}
-                    onChange={event => updateEndDate(event)}
                     id="outlined-dense"
-                    label="End Date"
+                    label="Year of Expiry"
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
                     variant="outlined"
                     />
                 </div>
-                <Button variant="contained" onClick={handleSubmit} color="primary" className={classes.button}>
-                    submit
+                <Button variant="contained" component={Link} to="/paid" color="secondary" className={classes.button}>
+                    PAY
                 </Button>
             </div>
             </div>
@@ -173,9 +114,9 @@ class Host extends Component {
         },
       });
 
-Host.propTypes = {
+Donate.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Host);
+export default withStyles(styles)(Donate);
