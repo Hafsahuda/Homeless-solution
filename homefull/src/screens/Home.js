@@ -21,6 +21,9 @@ class Home extends Component {
                     <Button component={Link} to="/host" size="large" variant="outlined" color="secondary" className={classes.button}>
                         Host
                     </Button>
+                    <Button component={Link} to="/find-charity" size="large" variant="outlined" color="secondary" className={classes.button}>
+                        Find a Charity
+                    </Button>
                 </div>
              </div>
             )
