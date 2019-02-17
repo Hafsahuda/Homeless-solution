@@ -3,6 +3,7 @@ package com.hackdfw.rootsofunity.homelessbackend.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,13 +23,11 @@ public class AddRoomController {
 	@Autowired
 	AvailabilityRepository availabilityRepo;
 
-	@RequestMapping("/room")
+	@PostMapping("/addRoom")
 	public ResponseEntity postController(@RequestBody AddRoomReq roomReq) {
 
-		Room room = roomReq.getRoom();
-		Availability availabilty = roomReq.getAvailability();
-		availabilty.setRoom(room);	
-		
+		Availability availabilty = roomReq.toAvailability();
+		availabilityRepo.save(availabilty);
 		
 		return ResponseEntity.ok(HttpStatus.OK);
 	}
