@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../screens/Home';
-import Charity from '../screens/Charity';
-import Host from '../screens/Host';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,6 +19,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -31,6 +30,7 @@ import classNames from 'classnames';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { createMuiTheme } from '@material-ui/core/styles';
+
 
 
 const drawerWidth = 240;
@@ -159,7 +159,7 @@ const styles = theme => createMuiTheme({
     },
 });
 
-class MainRouter extends React.Component {
+class AppAppBar extends React.Component {
     state = {
         open: false,
         anchorEl: null,
@@ -246,7 +246,7 @@ class MainRouter extends React.Component {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <Typography component={Link} to="/" variant="h4" color="inherit" noWrap>
+                            <Typography variant="h4" color="inherit" noWrap>
                                 Homeful
                         </Typography>
                             <div className={classes.search}>
@@ -315,26 +315,21 @@ class MainRouter extends React.Component {
                             ))}
                         </List>
                     </Drawer>
-                    <main
-                        className={classNames(classes.content, {
-                            [classes.contentShift]: open,
-                        })}
-                    >
-                        <div className={classes.drawerHeader} />
-                        <Route exact path="/" component={Home}></Route>
-                        <Route exact path="/charity" component={Charity}></Route>
-                        <Route exact path="/host" component={Host}></Route>
-                    </main>
                 </div>
-            </ Router>
+            </Router>
         );
     }
 }
 
-MainRouter.propTypes = {
+AppAppBar.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };
 
 
-export default withStyles(styles)(MainRouter);
+
+AppAppBar.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(AppAppBar);

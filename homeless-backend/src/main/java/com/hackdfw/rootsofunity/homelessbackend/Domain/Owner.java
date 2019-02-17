@@ -1,20 +1,17 @@
 package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Owner {
+@Data
+public class Owner extends User {
 
-    @Id
-    @GeneratedValue
-    private long ownerId;
-
-    private String name;
-
-    private String email;
-
-    private String phone;
+	@Id
+	@GeneratedValue
+	private long ownerId;
 
 }

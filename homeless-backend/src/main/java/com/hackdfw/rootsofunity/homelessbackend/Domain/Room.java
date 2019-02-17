@@ -1,8 +1,11 @@
 package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 public class Room {
 
     @Id
@@ -17,5 +20,5 @@ public class Room {
 
     private String state;
 
-    private int zipcode;
+    private String zipcode;
 }

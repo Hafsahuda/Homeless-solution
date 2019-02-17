@@ -1,9 +1,12 @@
 package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Data
 public class Availability {
 
     @Id

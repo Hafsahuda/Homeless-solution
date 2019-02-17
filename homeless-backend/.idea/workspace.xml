@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4c9b38e9-9089-4c8f-ab79-0346a5262c1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/AvailabilitySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/AvailabilitySearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Repository/RoomAvailabilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Repository/RoomAvailabilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Service/RoomAvailabilitySearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Service/RoomAvailabilitySearchService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Repository/RoomAvailabilityRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+            <state relative-caret-position="71">
+              <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +46,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/HomelessBackendApplication.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/CharityController.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/AvailabilitySearchController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Service/RoomAvailabilitySearchService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="19" column="129" lean-forward="true" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE-sources.jar!/org/springframework/format/annotation/DateTimeFormat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/RoomController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailability.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -57,69 +125,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="-161">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -127,8 +149,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailability.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/RoomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Service/RoomAvailabilitySearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Repository/RoomAvailabilityRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/AvailabilitySearchController.java" />
       </list>
     </option>
   </component>
@@ -149,7 +182,9 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -187,6 +222,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homelessbackend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="homeless-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="homeless-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homelessbackend" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homeless-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -296,12 +340,34 @@
       <option name="presentableId" value="Default" />
       <updated>1550350759115</updated>
       <workItem from="1550350760488" duration="904000" />
-      <workItem from="1550351721806" duration="343000" />
+      <workItem from="1550351721806" duration="9442000" />
     </task>
+    <task id="LOCAL-00001" summary="Added application properties">
+      <created>1550352230310</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550352230310</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Search Service">
+      <created>1550360418399</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550360418399</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'master' of https://github.com/Hafsahuda/Homeless-solution&#10;&#10;# Conflicts:&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Room.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailability.java">
+      <created>1550362879040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550362879040</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1247000" />
+    <option name="totallyTimeSpent" value="10346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,7 +382,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -324,18 +390,18 @@
       <window_info anchor="bottom" id="Messages" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.111292966" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18330605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.43698853" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.43698853" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.62847793" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49924356" weight="0.24222586" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -344,11 +410,123 @@
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.5335516" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" weight="0.43698853" />
+      <window_info anchor="bottom" id="Spring" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.43698853" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" weight="0.24222586" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added application properties" />
+    <MESSAGE value="Added Search Service" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/Hafsahuda/Homeless-solution&#10;&#10;# Conflicts:&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Room.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailability.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Hafsahuda/Homeless-solution&#10;&#10;# Conflicts:&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Room.java&#10;#&#9;homeless-backend/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailability.java" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailabiltyResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="5" selection-start-line="9" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../homefull/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../homefull/src/screens/Charity.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../homefull/src/screens/Homeowner.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../homefull/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../homefull/src/components/MainRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Repository/CharityRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -356,66 +534,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Availability.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/HomelessBackendApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="102">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Charity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/CharityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Owner.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE-sources.jar!/org/springframework/format/annotation/DateTimeFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="1241">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Payment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/RoomAvailability.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Renter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="105">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Domain/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="-161">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/HomelessBackendApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="179">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Repository/RoomAvailabilityRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+        <state relative-caret-position="71">
+          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Service/RoomAvailabilitySearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="19" column="129" lean-forward="true" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hackdfw/rootsofunity/homelessbackend/Controller/AvailabilitySearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
