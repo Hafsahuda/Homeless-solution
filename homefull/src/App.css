@@ -14,4 +14,10 @@
   padding: 0 20px;
 }
 
-.link:hover { color: #E91E63; }
+.link:hover {
+  color: #E91E63;
+}
+
+a:hover {
+  color: #E91E63
+}
