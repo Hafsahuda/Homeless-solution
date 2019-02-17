@@ -8,16 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Owner {
+public class Owner extends User {
 
-    @Id
-    @GeneratedValue
-    private long ownerId;
-
-    private String name;
-
-    private String email;
-
-    private String phone;
+	@Id
+	@GeneratedValue
+	private long ownerId;
 
 }

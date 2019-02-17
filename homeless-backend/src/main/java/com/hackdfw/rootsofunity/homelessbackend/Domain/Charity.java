@@ -8,21 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Charity {
+public class Charity extends User {
 
     @Id
     @GeneratedValue
     private long charityId;
-
-    private String orgName;
-
-    private String phone;
-
-    private String email;
-
-    private String address;
-
-    private String state;
-
-    private int zipcode;
+   
 }

@@ -8,15 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Renter {
+public class Renter extends User {
 
     @Id
     @GeneratedValue
     private long renterId;
 
-    private String name;
-
-    private String email;
-
-    private String phone;
 }
