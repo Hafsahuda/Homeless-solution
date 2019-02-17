@@ -29,11 +29,11 @@ class FindCharity extends Component {
               plat: position.coords.latitude,
               plng: position.coords.longitude
             };
-            that.setState({lat:position.coords.latitude,lng:position.coords.longitude});
+            that.setState({lat:32.7839958,lng:-96.7675791});
 
           }, function(failure) {
             // console.log(failure);
-            that.setState({lat:'29.7471673',lng:'-95.59599779999999'})
+            that.setState({lat:'32.7471673',lng:'-96.7675791'})
             var pos = {
                 plat: '29.7471673',
                 plng: '-95.59599779999999'
