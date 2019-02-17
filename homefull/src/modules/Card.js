@@ -57,8 +57,12 @@ class HouseCard extends React.Component {
     }
 
 
-    handleBook(){
-        alert(this.props.roomId);
+    handleBook(e){
+        
+        var availId = this.props.availId;
+        var from = this.props.startDate;
+        var to = this.props.endDate;
+     
         this.setState({redirect: true});
 
     }
@@ -83,7 +87,7 @@ class HouseCard extends React.Component {
                             <MoreVertIcon />
                         </IconButton>
                     }
-                    title={this.props.address + ', ' + this.props.city + ' ' + this.props.state + ' ' + this.props.zipcode}
+                    title={this.props.address + ', '  + this.props.state + ',' + this.props.zipcode}
                 // subheader="Posted on September 14, 2016"
                 />
                 <CardMedia
