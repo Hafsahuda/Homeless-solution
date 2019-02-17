@@ -11,16 +11,54 @@ export class Mapimp extends Component {
     super();
     this.markat=this.markat.bind(this);
     this.test=this.test.bind(this);
+    this.state={
+      jsn:[],
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: {},
+    };
   }
 
+  componentDidMount() {
+
+    // let jsn = [];
+     fetch('http://ec2-3-82-226-163.compute-1.amazonaws.com:8080/room/search?fromDate=17-02-2019&toDate=18-02-2019&zipcode=75252',
+         {
+             crossDomain: true
+         })
+         .then(response => response.json())
+         .then((data) =>
+             this.setState({
+                 jsn: data
+             }));
+ }
+
   test(e){
-    console.log("hi");
+    console.log(this.state.jsn);
+
   }
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
+
 
   markat(p,q){
     console.log(p);
     return(
-      <Marker title={'home location 2.'} name={'SOA'} position={{lat: p, lng: q}} onClick={this.test} ></Marker>
+      <Marker title={'home location 2.'} name={'home 2'} position={{lat: p, lng: q}} onClick={this.onMarkerClick}></Marker>
     )
   }
 
@@ -58,9 +96,15 @@ export class Mapimp extends Component {
           bounds={bounds}
           >
             {this.markat(llat,-96.7665918)}
-            <Marker title={'home location.'} name={'SOA'} position={{lat: 32.11266, lng: -96.7665918}} onClick={this.test}></Marker>
-            <Marker title={'Current location.'} name={'SOMA'} position={{lat:parseFloat(this.props.lat),lng:parseFloat(this.props.lng)}} icon={{
+            <Marker title={'home location.'} name={'home1'} position={{lat: 32.11266, lng: -96.7665918}} onClick={this.onMarkerClick}></Marker>
+            <Marker title={'Current location.'} name={'My location'} onClick={this.onMarkerClick} position={{lat:parseFloat(this.props.lat),lng:parseFloat(this.props.lng)}} icon={{
               url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'}}></Marker>
+            <InfoWindow
+              marker={this.state.activeMarker}
+              visible={this.state.showingInfoWindow}>
+              <div>{this.state.selectedPlace.name}</div>
+            </InfoWindow>
+
             
           </Map>
         </div>
