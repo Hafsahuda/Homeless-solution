@@ -31,6 +31,7 @@ import classNames from 'classnames';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { createMuiTheme } from '@material-ui/core/styles';
+import FindCharity from '../screens/FindCharity';
 
 
 const drawerWidth = 240;
@@ -137,7 +138,7 @@ const styles = theme => createMuiTheme({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing.unit * 30,
+        padding: theme.spacing.unit,
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -324,6 +325,7 @@ class MainRouter extends React.Component {
                         <Route exact path="/" component={Home}></Route>
                         <Route exact path="/charity" component={Charity}></Route>
                         <Route exact path="/host" component={Host}></Route>
+                        <Route eact path="/find-charity" component={FindCharity}></Route>
                     </main>
                 </div>
             </ Router>
