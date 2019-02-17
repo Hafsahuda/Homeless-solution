@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
 @Data
 public class AddRoomReq {
@@ -39,7 +39,6 @@ public class AddRoomReq {
 
 	public Availability toAvailability(){
 		Availability availability = Availability.builder()
-				.room(toRoom())
 				.availableFrom(toDate(availableFrom))
 				.availableTo(toDate(availableTo))
 				.build();

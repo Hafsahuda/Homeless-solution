@@ -4,6 +4,9 @@ import Home from '../screens/Home';
 import Charity from '../screens/Charity';
 import Host from '../screens/Host';
 import FindCharity from '../screens/FindCharity';
+import Pay from '../screens/Pay';
+import Paid from '../screens/Paid';
+import Donate from '../screens/Donate';
 import Test from '../screens/testing';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -35,7 +38,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 
-const drawerWidth = 240;
+
+const drawerWidth = 140;
 const styles = theme => createMuiTheme({
     grow: {
         flexGrow: 1,
@@ -248,7 +252,7 @@ class MainRouter extends React.Component {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <Typography component={Link} to="/" variant="h4" color="inherit" noWrap>
+                            <Typography component={Link} to="/" style={{textDecoration: 'none'}} variant="h4" color="inherit" noWrap>
                                 Homeful
                         </Typography>
                             <div className={classes.search}>
@@ -309,12 +313,18 @@ class MainRouter extends React.Component {
                         </div>
                         <Divider />
                         <List>
-                            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                                <ListItem button key={text}>
-                                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                    <ListItemText disableTypography primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>MyTitle</Typography>} />
-                                </ListItem>
-                            ))}
+                            <ListItem >
+                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Book Room</Typography>} />
+                            </ListItem>
+                            <ListItem >
+                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Host</Typography>} />
+                            </ListItem>
+                            <ListItem >
+                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Find a Charity</Typography>} />
+                            </ListItem>
+                            <ListItem >
+                                <ListItemText disableTypography primary={<Typography type="h2" style={{ color: '#FFFFFF' }}>Donate</Typography>} />
+                            </ListItem>
                         </List>
                     </Drawer>
                     <main
@@ -327,6 +337,9 @@ class MainRouter extends React.Component {
                         <Route exact path="/charity" component={Charity}></Route>
                         <Route exact path="/host" component={Host}></Route>
                         <Route exact path="/find-charity" component={FindCharity}></Route>
+                        <Route exact path="/pay" component={Pay}></Route>
+                        <Route exact path="/paid" component={Paid}></Route>
+                        <Route exact path="/donate" component={Donate}></Route>
                         <Route exact path="/test" component={Test}></Route>
                     </main>
                 </div>

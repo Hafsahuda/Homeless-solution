@@ -1,21 +1,33 @@
 package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reservation {
 
     @Id
     @GeneratedValue
     private long reservationId;
 
-    private Date from_Date;
+    @DateTimeFormat(pattern="dd-MM-yyyy")
+    @JsonFormat(pattern="dd-MM-yyyy")
+    private Date bookFrom;
 
-    private Date to_Date;
+    @DateTimeFormat(pattern="dd-MM-yyyy")
+    @JsonFormat(pattern="dd-MM-yyyy")
+    private Date bookTo;
 
     @OneToOne
     @JoinColumn(name = "roomId")
@@ -29,7 +41,7 @@ public class Reservation {
     @JoinColumn(name = "charityId")
     private Charity charity;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "paymentId")
     private Payment payment;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -13,7 +14,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
@@ -43,13 +44,30 @@ const styles = theme => ({
     },
 });
 
+
+
 class HouseCard extends React.Component {
     constructor(props) {
         super(props);
+        this.handleBook = this.handleBook.bind(this);
+
+        this.state = {
+            redirect: false,
+        };
     }
 
 
+    handleBook(){
+        alert(this.props.roomId);
+        this.setState({redirect: true});
+
+    }
+
     render() {
+        if (this.state.redirect) {
+            return <Redirect push to='/pay' />
+        }
+
         const { classes } = this.props;
 
         return (
@@ -66,7 +84,7 @@ class HouseCard extends React.Component {
                         </IconButton>
                     }
                     title={this.props.address + ', ' + this.props.city + ' ' + this.props.state + ' ' + this.props.zipcode}
-                    // subheader="Posted on September 14, 2016"
+                // subheader="Posted on September 14, 2016"
                 />
                 <CardMedia
                     className={classes.media}
@@ -76,14 +94,14 @@ class HouseCard extends React.Component {
                 <CardContent>
                     <Typography component="p">
                         {this.props.startDate} - {this.props.endDate}
-          </Typography>
+                    </Typography>
                 </CardContent>
                 <CardActions className={classes.actions}>
                     <IconButton aria-label="Add to favorites">
                         <FavoriteIcon />
                     </IconButton>
-                    <IconButton aria-label="Share">
-                        <ShareIcon />
+                    <IconButton aria-label="Book Me">
+                        <button onClick={this.handleBook}> Book Me</button>
                     </IconButton>
                 </CardActions>
             </Card>

@@ -58,7 +58,7 @@ class FindCharity extends Component {
                 </Typography>
                 <h3 style={{ color: 'white', textAlign: 'center' }}>Nearby shelters</h3>
                 <Container>
-                    <Row style={{textAlign:"center"}}>
+                    <Row style={{textAlign:"center",margin:'auto'}}>
                         <Mapimp lat={this.state.lat} lng={this.state.lng}/>
                     </Row>
                 </Container>

@@ -12,20 +12,17 @@ class Home extends Component {
         return (
             <div style={{ marginTop: '200px' }}>
                 <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }} paragraph>
-                    Welcome to Homeful
+                    Congratulations! You are making the world a better place!
                 </Typography>
                 <div style={{ textAlign: 'center' }}>
                     <Button component={Link} to="/charity" size="large" variant="outlined" color="secondary" className={classes.button}>
-                        Book Room
+                        Charity
                     </Button>
                     <Button component={Link} to="/host" size="large" variant="outlined" color="secondary" className={classes.button}>
                         Host
                     </Button>
                     <Button component={Link} to="/find-charity" size="large" variant="outlined" color="secondary" className={classes.button}>
                         Find a Charity
-                    </Button>
-                    <Button component={Link} to="/donate" size="large" variant="outlined" color="secondary" className={classes.button}>
-                        Donate
                     </Button>
                 </div>
             </div>
