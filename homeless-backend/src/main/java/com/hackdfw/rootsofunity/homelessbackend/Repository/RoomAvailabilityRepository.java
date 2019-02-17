@@ -8,6 +8,6 @@ import java.util.Set;
 
 public interface RoomAvailabilityRepository extends JpaRepository<Availability, Long> {
 
-    Set<Availability> getAvailabilitiesByRoom_ZipcodeIsAndAvailableFromIsBeforeAndAvailableToAfter(Date fromDate, Date toDate, long zipcode);
+    Set<Availability> getAvailabilitiesByRoom_ZipcodeIsAndAvailableFromIsBeforeAndAvailableToAfter(int zipcode,Date fromDate, Date toDate);
 
 }

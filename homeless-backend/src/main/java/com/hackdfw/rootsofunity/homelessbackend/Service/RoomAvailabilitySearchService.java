@@ -16,8 +16,8 @@ public class RoomAvailabilitySearchService {
     @Autowired
     private RoomAvailabilityRepository roomAvailabilityRepository;
 
-    public Set<RoomAvailability> search(Date fromDate, Date toDate, long zipcode){
-        Set<Availability> availabilitySet = roomAvailabilityRepository.getAvailabilitiesByRoom_ZipcodeIsAndAvailableFromIsBeforeAndAvailableToAfter(fromDate,toDate,zipcode);
+    public Set<RoomAvailability> search(Date fromDate, Date toDate, int zipcode){
+        Set<Availability> availabilitySet = roomAvailabilityRepository.getAvailabilitiesByRoom_ZipcodeIsAndAvailableFromIsBeforeAndAvailableToAfter(zipcode,fromDate,toDate);
         Map<Room,Set<Availability>> roomAvailabilityMap = new HashMap<>();
         availabilitySet.stream().forEach(each->{
             if(roomAvailabilityMap.containsKey(each.getRoom())){

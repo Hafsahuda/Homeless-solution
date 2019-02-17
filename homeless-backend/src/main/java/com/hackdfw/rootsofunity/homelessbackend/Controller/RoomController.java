@@ -26,9 +26,7 @@ public class RoomController {
 	public ResponseEntity postController(@RequestBody RoomAvailability roomAvailability) {
 
 		Room room = roomAvailability.getRoom();
-		Availability availabilty = roomAvailability.getAvailability();
-		availabilty.setRoom(room);	
-		
+
 		
 		return ResponseEntity.ok(HttpStatus.OK);
 	}
