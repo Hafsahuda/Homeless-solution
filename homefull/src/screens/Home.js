@@ -25,7 +25,7 @@ class Home extends Component {
     render() {
         const { classes, theme } = this.props;
         return (
-            <div>
+            <div style={{marginTop: '200px'}}>
                 <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }} paragraph>
                     Welcome to Homeful
                 </Typography>
