@@ -140,7 +140,7 @@ const styles = theme => createMuiTheme({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing.unit * 5,
+        padding: theme.spacing.unit,
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
