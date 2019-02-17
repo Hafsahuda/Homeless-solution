@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -49,14 +50,24 @@ class HouseCard extends React.Component {
     constructor(props) {
         super(props);
         this.handleBook = this.handleBook.bind(this);
+
+        this.state = {
+            redirect: false,
+        };
     }
 
 
     handleBook(){
         alert(this.props.roomId);
+        this.setState({redirect: true});
+
     }
 
     render() {
+        if (this.state.redirect) {
+            return <Redirect push to='/pay' />
+        }
+
         const { classes } = this.props;
 
         return (
