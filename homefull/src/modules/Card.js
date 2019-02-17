@@ -62,8 +62,35 @@ class HouseCard extends React.Component {
         var availId = this.props.availId;
         var from = this.props.startDate;
         var to = this.props.endDate;
-     
+        var rid = this.props.roomId;
+        const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+        const targeturl = 'http://ec2-3-82-226-163.compute-1.amazonaws.com:8080/reserve';
+        const data = {
+            roomId: rid,
+            // city: this.state.city,
+            renterId:2,
+            charityId: 3,
+            bookFrom: from,
+            bookTo: to,
+            availabilityId: availId,
+        };
+        fetch(proxyurl + targeturl, {
+            method: 'post',
+            body: JSON.stringify(data),
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+            .then(res => res.json())
+            .then(posts => {
+                console.log(posts);
+            })
+            .catch(e => {
+                console.log(e);
+                return e;
+            });
         this.setState({redirect: true});
+        
 
     }
 
@@ -97,7 +124,7 @@ class HouseCard extends React.Component {
                 />
                 <CardContent>
                     <Typography component="p">
-                        {this.props.startDate} - {this.props.endDate}
+                        {this.props.startDate} to {this.props.endDate}
                     </Typography>
                 </CardContent>
                 <CardActions className={classes.actions}>
