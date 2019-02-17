@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
@@ -13,7 +14,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
@@ -48,21 +49,29 @@ const styles = theme => ({
 class HouseCard extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleBook = this.handleBook.bind(this);
+
+        this.state = {
+            redirect: false,
+        };
     }
 
 
-
-    handleClick() {
-        //e.preventDefault();
+    handleBook(){
         alert(this.props.roomId);
+        this.setState({redirect: true});
+
     }
 
     render() {
+        if (this.state.redirect) {
+            return <Redirect push to='/pay' />
+        }
+
         const { classes } = this.props;
 
         return (
-            <Card className={classes.card} onClick={this.handleClick}>
+            <Card className={classes.card}>
                 <CardHeader
                     //   avatar={
                     //     <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -91,8 +100,8 @@ class HouseCard extends React.Component {
                     <IconButton aria-label="Add to favorites">
                         <FavoriteIcon />
                     </IconButton>
-                    <IconButton aria-label="Share">
-                        <ShareIcon />
+                    <IconButton aria-label="Book Me">
+                        <button onClick={this.handleBook}> Book Me</button>
                     </IconButton>
                 </CardActions>
             </Card>
