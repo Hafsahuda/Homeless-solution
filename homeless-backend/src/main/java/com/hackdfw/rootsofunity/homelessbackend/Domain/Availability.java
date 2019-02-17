@@ -1,12 +1,18 @@
 package com.hackdfw.rootsofunity.homelessbackend.Domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Availability {
 
     @Id
@@ -17,7 +23,7 @@ public class Availability {
 
     private Date availableTo;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "roomId")
     private Room room;
 

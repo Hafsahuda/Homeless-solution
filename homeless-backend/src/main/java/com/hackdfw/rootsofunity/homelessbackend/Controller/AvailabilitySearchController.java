@@ -21,7 +21,7 @@ public class AvailabilitySearchController {
     RoomAvailabilitySearchService roomAvailabilitySearchService;
 
     @RequestMapping(value = "")
-    public Set<RoomAvailability> getAvailableRooms(@RequestParam @DateTimeFormat(pattern="yyyy-MM-dd")Date fromDate, @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date toDate, @RequestParam String zipcode){
+    public Set<RoomAvailability> getAvailableRooms(@RequestParam @DateTimeFormat(pattern="dd-MM-yyyy")Date fromDate, @RequestParam @DateTimeFormat(pattern="dd-MM-yyyy") Date toDate, @RequestParam String zipcode){
         return roomAvailabilitySearchService.search(fromDate, toDate, zipcode);
     }
 

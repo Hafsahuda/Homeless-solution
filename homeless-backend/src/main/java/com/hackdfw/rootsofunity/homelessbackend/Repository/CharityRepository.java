@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CharityRepository extends JpaRepository<Charity, Long> {
 
-    public List<Charity> findByZipcode(String zip);
+//    List<Charity> findAllByZipcode(String zipcode);
 }
