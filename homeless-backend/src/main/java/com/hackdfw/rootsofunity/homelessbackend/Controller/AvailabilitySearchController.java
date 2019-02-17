@@ -20,7 +20,7 @@ public class AvailabilitySearchController {
     @Autowired
     RoomAvailabilitySearchService roomAvailabilitySearchService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://ec2-3-82-226-163.compute-1.amazonaws.com:3000")
     @RequestMapping(value = "")
     public Set<RoomAvailability> getAvailableRooms(@RequestParam @DateTimeFormat(pattern="dd-MM-yyyy")Date fromDate, @RequestParam @DateTimeFormat(pattern="dd-MM-yyyy") Date toDate, @RequestParam String zipcode){
         Set<RoomAvailability> results = roomAvailabilitySearchService.search(fromDate, toDate, zipcode);
