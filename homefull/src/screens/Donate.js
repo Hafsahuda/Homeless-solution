@@ -75,7 +75,7 @@ class Donate extends Component {
                     variant="outlined"
                     />
                 </div>
-                <Button variant="contained" component={Link} to="/paid" color="secondary" className={classes.button}>
+                <Button variant="contained" component={Link} to="/congratulations" color="secondary" className={classes.button}>
                     PAY
                 </Button>
             </div>
