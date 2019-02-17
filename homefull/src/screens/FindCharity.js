@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
 
-class Host extends Component {
+class FindCharity extends Component {
     render() {
         const { classes, theme } = this.props;
         return (
@@ -14,10 +14,10 @@ class Host extends Component {
                 <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }} paragraph>
                     Hey Host
                 </Typography>
-             </div>
-            )
-        }
+            </div>
+        )
     }
+}
 
 
 const styles = theme => ({
@@ -26,9 +26,9 @@ const styles = theme => ({
     },
 });
 
-Host.propTypes = {
+FindCharity.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Host);
+export default withStyles(styles)(FindCharity);

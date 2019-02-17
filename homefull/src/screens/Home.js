@@ -19,6 +19,11 @@ export class Home extends Component {
     render() {
         const { classes, theme } = this.props;
 
+
+
+class Home extends Component {
+    render() {
+        const { classes, theme } = this.props;
         return (
             <div>
                 <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }} paragraph>
@@ -31,13 +36,26 @@ export class Home extends Component {
                     <Button component={Link} to="/host" size="large" variant="outlined" color="secondary" className={classes.button}>
                         Host
                     </Button>
+<<<<<<< HEAD
                 </div>
             </div>
         );
+=======
+                    <Button component={Link} to="/find-charity" size="large" variant="outlined" color="secondary" className={classes.button}>
+                        Find a Charity
+                    </Button>
+                </div>
+             </div>
+            )
+        }
+>>>>>>> 8182a9cdfb399f112a7dc5f5265247eb423371ff
     }
-}
 
+<<<<<<< HEAD
 const drawerWidth = 240;
+=======
+
+>>>>>>> 8182a9cdfb399f112a7dc5f5265247eb423371ff
 const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
@@ -49,4 +67,8 @@ Home.propTypes = {
     theme: PropTypes.object.isRequired,
 };
 
+<<<<<<< HEAD
 export default withStyles(styles)(Home);
+=======
+export default withStyles(styles)(Home);
+>>>>>>> 8182a9cdfb399f112a7dc5f5265247eb423371ff

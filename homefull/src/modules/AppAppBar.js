@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../screens/Home';
-import Charity from '../screens/Charity';
-import Host from '../screens/Host';
-<<<<<<< HEAD
-=======
-import FindCharity from '../screens/FindCharity';
-import Test from '../screens/testing';
->>>>>>> 8182a9cdfb399f112a7dc5f5265247eb423371ff
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -26,6 +19,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -143,7 +137,7 @@ const styles = theme => createMuiTheme({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing.unit,
+        padding: theme.spacing.unit * 30,
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -165,7 +159,7 @@ const styles = theme => createMuiTheme({
     },
 });
 
-class MainRouter extends React.Component {
+class AppAppBar extends React.Component {
     state = {
         open: false,
         anchorEl: null,
@@ -235,52 +229,6 @@ class MainRouter extends React.Component {
 
         return (
             <Router>
-<<<<<<< HEAD
-            <div className={classes.root}>
-                <CssBaseline />
-                <AppBar
-                    position="fixed"
-                    className={classNames(classes.appBar, {
-                        [classes.appBarShift]: open,
-                    })}
-                >
-                    <Toolbar disableGutters={!open}>
-                        <IconButton
-                            color="inherit"
-                            aria-label="Open drawer"
-                            onClick={this.handleDrawerOpen}
-                            className={classNames(classes.menuButton, open && classes.hide)}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography component={Link} to="/" variant="h4" color="inherit" noWrap>
-                            Homeful
-                        </Typography>
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
-                            </div>
-                            <InputBase
-                                placeholder="Search…"
-                                classes={{
-                                    root: classes.inputRoot,
-                                    input: classes.inputInput,
-                                }}
-                            />
-                        </div>
-                        <div className={classes.grow} />
-                        <div className={classes.sectionDesktop}>
-                            <IconButton color="inherit">
-                                <Badge badgeContent={0} color="secondary">
-                                    <MailIcon />
-                                </Badge>
-                            </IconButton>
-                            <IconButton color="inherit">
-                                <Badge badgeContent={0} color="secondary">
-                                    <NotificationsIcon />
-                                </Badge>
-                            </IconButton>
-=======
                 <div className={classes.root}>
                     <CssBaseline />
                     <AppBar
@@ -290,7 +238,6 @@ class MainRouter extends React.Component {
                         })}
                     >
                         <Toolbar disableGutters={!open}>
->>>>>>> 8182a9cdfb399f112a7dc5f5265247eb423371ff
                             <IconButton
                                 color="inherit"
                                 aria-label="Open drawer"
@@ -299,7 +246,7 @@ class MainRouter extends React.Component {
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <Typography component={Link} to="/" variant="h4" color="inherit" noWrap>
+                            <Typography variant="h4" color="inherit" noWrap>
                                 Homeful
                         </Typography>
                             <div className={classes.search}>
@@ -358,49 +305,6 @@ class MainRouter extends React.Component {
                                 <ChevronLeftIcon />
                             </IconButton>
                         </div>
-<<<<<<< HEAD
-                    </Toolbar>
-                </AppBar>
-                {renderMenu}
-                {renderMobileMenu}
-                <Drawer
-                    className={classes.drawer}
-                    variant="persistent"
-                    anchor="left"
-                    open={open}
-                    classes={{
-                        paper: classes.drawerPaper,
-                    }}
-                >
-                    <div className={classes.drawerHeader}>
-                        <IconButton onClick={this.handleDrawerClose}>
-                            <ChevronLeftIcon />
-                        </IconButton>
-                    </div>
-                    <Divider />
-                    <List>
-                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText disableTypography primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>MyTitle</Typography>} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Drawer>
-                <main
-                    className={classNames(classes.content, {
-                        [classes.contentShift]: open,
-                    })}
-                >
-                    <div className={classes.drawerHeader} />
-                    <Route exact path="/" component={Home}></Route>
-                    <Route exact path="/charity" component={Charity}></Route>
-                    <Route exact path="/host" component={Host}></Route>
-                </main>
-
-            </div>
-            </Router>
-=======
                         <Divider />
                         <List>
                             {['All mail', 'Trash', 'Spam'].map((text, index) => (
@@ -411,29 +315,21 @@ class MainRouter extends React.Component {
                             ))}
                         </List>
                     </Drawer>
-                    <main
-                        className={classNames(classes.content, {
-                            [classes.contentShift]: open,
-                        })}
-                    >
-                        <div className={classes.drawerHeader} />
-                        <Route exact path="/" component={Home}></Route>
-                        <Route exact path="/charity" component={Charity}></Route>
-                        <Route exact path="/host" component={Host}></Route>
-                        <Route exact path="/find-charity" component={FindCharity}></Route>
-                        <Route exact path="/test" component={Test}></Route>
-                    </main>
                 </div>
-            </ Router>
->>>>>>> 8182a9cdfb399f112a7dc5f5265247eb423371ff
+            </Router>
         );
     }
 }
 
-MainRouter.propTypes = {
+AppAppBar.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };
 
 
-export default withStyles(styles)(MainRouter);
+
+AppAppBar.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(AppAppBar);
